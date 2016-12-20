@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <title>Auntie's Anne</title>
+</head>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 50%;
+  height: 40%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+b {
+    font-size: 30px;
+	font-weight: lighter;
+}
+h3{
+		font-weight: bold;
+		font-size: 30px;
+}
+
+</style>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">FRESHCO</a>
+    </div>
+     <ul class="topnav" id="myTopnav">
+    <li class="active"><a href="home.html">Home</a></li>
+      <li>  <a onclick="openNav()">Menu</a></li>
+      <li><a href="aboutus.html">ABOUT US</a></li>
+	   <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+  </li>
+	
+    </ul>
+  </div>
+</nav>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="allseason.html">All Seasons</a>
+			<a href="pastamania.html">Pastamania</a>
+           <a href="sushitei.html">Sushi Tei</a>
+          <a href="waroengpenyet.html">Waroeng Penyet</a>
+			 <a href="shinobu.html">Shinobu</a>
+            <a href="cinnabon.html">Cinnabon</a>
+			 <a href="aunt.html">Auntie's Anne</a>
+           <a href="iloveyoo.html">I Love Yoo</a>
+            <a href="killiney.html">Killiney</a>
+			 <a href="gloriajeans.html">Gloria's Jeans</a>
+           <a href="freshcosan.html">Freshco Sandwich</a>
+            <a href="foodjunction.html">Freshco Food Junction</a>
+			
+</div>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+var slideIndex = 0;
+showSlides();
+
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+ 
+</script>
+ 
+  <img src="image/auntie-anneslogo.png" height="42" alt="Norway" align="center">
+
+  <div class="container-fluid">
+  <h3>PRETZEL<h3>
+ <div class="row">
+    <div class="col-sm-4">
+	<div class="panel panel-default">
+	<div class="panel-header" align="center"><b>Cinnamon</b></div>
+    <div class="panel-body"> <img src="image/auntie/cinnamon-sugar-thumb.png" alt="Norway" height="250" width="250"></div> 
+	<div class="panel-footer" align="center">$2.30</div>
+  </div>
+	
+	</div>
+    
+	<div class="col-sm-4">
+   <div class="panel-header" align="center"><b>Jalapeno</b></div>
+    <div class="panel-body"> <img src="image/auntie/jalapeno-thumb.png" alt="Norway" height="250" width="250"></div>
+    <div class="panel-footer" align="center">$2.20</div>
+  </div>
+  
+    <div class="col-sm-4">
+  <div class="panel-header" align="center"><b>Original</b></div>
+    <div class="panel-body"> <img src="image/auntie/original-thumb.png" alt="Norway" height="250" width="250" ></div>
+    <div class="panel-footer" align="center">$2.00</div>
+  </div>
+  </div>
+  </div>
+  
+  <h3>DRINKS</h3>
+  <div class="container-fluid">
+ <div class="row">
+    <div class="col-sm-4">
+	<div class="panel panel-default">
+	<div class="panel-header" align="center"><b>Frozen Lemonade</b></div>
+    <div class="panel-body"> <img src="image/auntie/frozen-lemonade-mixers-thumb.png" alt="Norway" height="250" width="250"></div> 
+	<div class="panel-footer" align="center">$3.80</div>
+  </div>
+	
+	</div>
+    
+	<div class="col-sm-4">
+   <div class="panel-header" align="center"><b>Lemonade Mixers</b></div>
+    <div class="panel-body"> <img src="image/auntie/lemonade-mixers-thumb.png" alt="Norway" height="250" width="250"></div>
+    <div class="panel-footer" align="center">$3.50</div>
+  </div>
+  
+    <div class="col-sm-4">
+  <div class="panel-header" align="center"><b>Old fashioned Lemonade</b></div>
+    <div class="panel-body"> <img src="image/auntie/lemonade-thumb.png" alt="Norway" height="250" width="250"></div>
+    <div class="panel-footer" align="center">$3.00</div>
+  </div>
+  </div>
+  </div>
+  
+   <h3>SPECIALTIES</h3>
+  <div class="container-fluid">
+ <div class="row">
+    <div class="col-sm-4">
+	<div class="panel panel-default">
+	<div class="panel-header" align="center"><b>Original Nuggets</b></div>
+    <div class="panel-body"> <img src="image/auntie/original-nuggets-thumb.png" alt="Norway" height="250px" width="250"align="center"></div> 
+	<div class="panel-footer" align="center">$2.30</div>
+  </div>
+	
+	</div>
+    
+	
+    
+  </div>
+  </div>
+</body>
+
+<footer class="container-fluid text-center">
+  <p>Freshco Delivery Menu</p>
+</footer>
+
+</html> 
