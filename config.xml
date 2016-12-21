@@ -7,7 +7,7 @@
 
 <!-- versionCode is optional and Android only -->
 
-  <name>Freshco Delivery</name>
+  <name>mp3</name>
 
   <description>
      this is the informative application for 
@@ -17,7 +17,7 @@
       Hardeep Shoker
   </author>
 
-     <icon src="freshco.png" />
+     <icon src="fresco.png" />
 <gap:plugin name="cordova-plugin-whitelist" source="npm" />
  <allow-intent href="http://*/*" />
 <allow-navigation href="https://*/*" />
