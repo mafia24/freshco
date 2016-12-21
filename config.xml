@@ -17,7 +17,7 @@
       Hardeep Shoker
   </author>
 
-     <icon src="fresco.png" />
+     <icon src="freshco.png" />
 <gap:plugin name="cordova-plugin-whitelist" source="npm" />
  <allow-intent href="http://*/*" />
 <allow-navigation href="https://*/*" />
